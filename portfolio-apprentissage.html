@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio d'apprentissage - Étudiant BUT Informatique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html#home" class="font-mono text-xl font-bold text-gradient">
+                    &lt;Portfolio/&gt;
+                </a>
+                <div id="main-menu" class="flex items-center space-x-8">
+                    <a href="index.html#home" class="text-gray-300 hover:text-cyan-400 transition-colors">Accueil</a>
+                    <a href="index.html#about" class="text-gray-300 hover:text-cyan-400 transition-colors">À propos</a>
+                    <div class="relative">
+                        <button id="projects-trigger" class="inline-flex items-center text-gray-300 hover:text-cyan-400 transition-colors">
+                            Projets
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="projects-dropdown" class="absolute right-0 mt-2 w-64 hidden bg-slate-900/95 backdrop-blur border border-slate-700 rounded-lg shadow-xl p-2">
+                            <a href="index.html#projects" class="block px-3 py-2 rounded text-gray-300 hover:bg-slate-800 hover:text-white">Tous les projets</a>
+                            <div class="my-1 border-t border-slate-700/60"></div>
+                            <a href="projet1.html" class="block px-3 py-2 rounded text-gray-300 hover:bg-slate-800 hover:text-white">Jeu Pokémon TCG</a>
+                            <a href="projet2.html" class="block px-3 py-2 rounded text-gray-300 hover:bg-slate-800 hover:text-white">Démocratie Participative</a>
+                            <a href="projet3.html" class="block px-3 py-2 rounded text-gray-300 hover:bg-slate-800 hover:text-white">Bot Discord ChatGPT</a>
+                        </div>
+                    </div>
+                    <a href="portfolio-apprentissage.html" class="text-cyan-400 font-semibold">Portfolio d'apprentissage</a>
+                    <a href="index.html#contact" class="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[60vh] flex items-center relative pt-28 pb-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="space-y-6">
+                <p class="text-cyan-400 font-mono text-lg">Portfolio d'apprentissage</p>
+                <h1 class="text-5xl lg:text-6xl font-bold text-white">
+                    Mes compétences et apprentissages
+                </h1>
+                <p class="text-lg text-gray-400 max-w-3xl">
+                    Cette page présente mes apprentissages clés, les compétences développées
+                    et les preuves associées au fil de ma formation.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="index.html#projects" class="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-all hover-scale shadow-lg shadow-cyan-500/30">
+                        Voir mes projets
+                    </a>
+                    <a href="index.html#contact" class="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <section class="py-16 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-6 space-y-12">
+            <div class="glass-effect p-8 rounded-xl">
+                <h2 class="text-3xl font-bold text-white mb-4">Objectifs et compétences</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Décris ici les compétences visées (ex. concevoir, développer, valider, déployer)
+                    et comment elles s'inscrivent dans ton parcours.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-800 p-6 rounded-xl border border-cyan-500/20">
+                    <h3 class="text-xl font-semibold text-white mb-3">Compétence 1</h3>
+                    <p class="text-gray-400 mb-4">Résumé de l'apprentissage et contexte.</p>
+                    <ul class="text-gray-300 space-y-2">
+                        <li>Preuve 1 : lien ou description.</li>
+                        <li>Preuve 2 : lien ou description.</li>
+                        <li>Preuve 3 : lien ou description.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-cyan-500/20">
+                    <h3 class="text-xl font-semibold text-white mb-3">Compétence 2</h3>
+                    <p class="text-gray-400 mb-4">Résumé de l'apprentissage et contexte.</p>
+                    <ul class="text-gray-300 space-y-2">
+                        <li>Preuve 1 : lien ou description.</li>
+                        <li>Preuve 2 : lien ou description.</li>
+                        <li>Preuve 3 : lien ou description.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="glass-effect p-8 rounded-xl">
+                <h2 class="text-3xl font-bold text-white mb-4">Bilan et perspectives</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Présente ici un bilan personnel, les points forts, axes d'amélioration
+                    et objectifs pour la suite.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center">
+                <p class="text-gray-400 text-sm">© 2025 Pascal HILT. Licencié sous MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dropdown (clic toutes tailles)
+        const projectsTrigger = document.getElementById('projects-trigger');
+        const projectsDropdown = document.getElementById('projects-dropdown');
+        if (projectsTrigger && projectsDropdown) {
+            projectsTrigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                projectsDropdown.classList.toggle('hidden');
+            });
+            document.addEventListener('click', (e) => {
+                if (!projectsDropdown.contains(e.target) && !projectsTrigger.contains(e.target)) {
+                    projectsDropdown.classList.add('hidden');
+                }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    projectsDropdown.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
