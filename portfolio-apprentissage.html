@@ -70,41 +70,153 @@
     <!-- Contenu principal -->
     <section class="py-16 bg-slate-900">
         <div class="max-w-7xl mx-auto px-6 space-y-12">
+            <!-- Introduction -->
             <div class="glass-effect p-8 rounded-xl">
-                <h2 class="text-3xl font-bold text-white mb-4">Objectifs et compétences</h2>
+                <h2 class="text-3xl font-bold text-white mb-4">Mes projets et travaux</h2>
                 <p class="text-gray-300 leading-relaxed">
-                    Décris ici les compétences visées (ex. concevoir, développer, valider, déployer)
-                    et comment elles s'inscrivent dans ton parcours.
+                    Voici une présentation de 4 projets et travaux significatifs que j'ai réalisés durant ma formation.
+                    Chaque projet illustre les compétences développées et les apprentissages critiques mobilisés.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-slate-800 p-6 rounded-xl border border-cyan-500/20">
-                    <h3 class="text-xl font-semibold text-white mb-3">Compétence 1</h3>
-                    <p class="text-gray-400 mb-4">Résumé de l'apprentissage et contexte.</p>
-                    <ul class="text-gray-300 space-y-2">
-                        <li>Preuve 1 : lien ou description.</li>
-                        <li>Preuve 2 : lien ou description.</li>
-                        <li>Preuve 3 : lien ou description.</li>
-                    </ul>
+            <!-- Projet 1 : TD Virtualisation -->
+            <div class="glass-effect p-8 rounded-xl">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <div class="inline-flex items-center px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-semibold mb-3">
+                            Projet 1
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">TD Virtualisation</h3>
+                    </div>
                 </div>
-                <div class="bg-slate-800 p-6 rounded-xl border border-cyan-500/20">
-                    <h3 class="text-xl font-semibold text-white mb-3">Compétence 2</h3>
-                    <p class="text-gray-400 mb-4">Résumé de l'apprentissage et contexte.</p>
-                    <ul class="text-gray-300 space-y-2">
-                        <li>Preuve 1 : lien ou description.</li>
-                        <li>Preuve 2 : lien ou description.</li>
-                        <li>Preuve 3 : lien ou description.</li>
-                    </ul>
+
+                <div class="space-y-6">
+                    <!-- Description -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-cyan-400 mb-2">Description</h4>
+                        <p class="text-gray-300 leading-relaxed">
+                            Nous avions pour objectif de réaliser un réseau avec différentes machines virtuelles pouvant communiquer entre elles.
+                            Il y a 5 machines au total dont 2 servant de "client" (une VM Windows et une VM Linux), 2 servant de "serveur"
+                            (avec différents serveurs installés dessus) et une VM servant de "routeur" pour permettre aux autres d'accéder à internet.
+                        </p>
+                    </div>
+
+                    <!-- Informations du projet -->
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-cyan-500/10">
+                            <p class="text-gray-400 text-sm mb-1">Durée</p>
+                            <p class="text-white font-semibold">1 à 2 semaines</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-cyan-500/10">
+                            <p class="text-gray-400 text-sm mb-1">Équipe</p>
+                            <p class="text-white font-semibold">Travail de groupe - 3 personnes</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-cyan-500/10">
+                            <p class="text-gray-400 text-sm mb-1">Contraintes</p>
+                            <p class="text-white font-semibold">Installation sur la même machine</p>
+                        </div>
+                    </div>
+
+                    <!-- Mon implication -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-cyan-400 mb-3">Mon implication</h4>
+                        <p class="text-gray-300 leading-relaxed mb-3">
+                            Je me suis occupé d'installer et de configurer l'intégralité des machines virtuelles sur mon pc portable de l'IUT.
+                            Concrètement j'ai :
+                        </p>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Installé les différents serveurs sur les VMs (serveur web, base de données, dossier partagé entre chaque VMs)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Configuré les adresses IPs pour permettre à chaque VMs de communiquer entre elles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Assuré de la robustesse de chaque VMs pour éviter que certaines configurations ne soient à refaire</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Optimisé les ressources utilisées par les différentes VMs pour que le tout fonctionne sur la même machine</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Vérifié le fonctionnement de toutes les VMs entre elles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Participé à la rédaction d'un support d'installation du réseau</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Apprentissages critiques -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-cyan-400 mb-3">Apprentissages critiques et composantes essentielles</h4>
+                        <p class="text-gray-300 leading-relaxed">
+                            Ce TD m'a surtout permis de mobiliser l'<span class="text-cyan-400 font-semibold">AC2</span>, car j'ai installé et configuré plusieurs machines virtuelles
+                            ainsi que des services réseau virtualisés dans une même architecture : routeur, clients, serveur web, base de données et dossier partagé.
+                            J'ai aussi mobilisé l'<span class="text-cyan-400 font-semibold">AC3</span> en mettant en place une infrastructure réseau fonctionnelle et plus fiable
+                            grâce au routage, au NAT et à la persistance de certaines configurations. Enfin, l'<span class="text-cyan-400 font-semibold">AC1</span> a été mobilisé
+                            de façon plus partielle, puisque les services déployés permettaient la communication entre les machines et les applications.
+                            Cette expérience m'a également permis de travailler les composantes essentielles <span class="text-cyan-400 font-semibold">CE2, CE3 et CE4</span>,
+                            en appliquant une architecture cohérente, en vérifiant le bon fonctionnement des services et en assurant leur robustesse dans le temps.
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="glass-effect p-8 rounded-xl">
-                <h2 class="text-3xl font-bold text-white mb-4">Bilan et perspectives</h2>
-                <p class="text-gray-300 leading-relaxed">
-                    Présente ici un bilan personnel, les points forts, axes d'amélioration
-                    et objectifs pour la suite.
-                </p>
+            <!-- Projet 2 - À venir -->
+            <div class="glass-effect p-8 rounded-xl opacity-50">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <div class="inline-flex items-center px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-sm font-semibold mb-3">
+                            Projet 2
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-400">À venir...</h3>
+                    </div>
+                </div>
+                <p class="text-gray-500">Le contenu de ce projet sera ajouté prochainement.</p>
+            </div>
+
+            <!-- Projet 3 - À venir -->
+            <div class="glass-effect p-8 rounded-xl opacity-50">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <div class="inline-flex items-center px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-sm font-semibold mb-3">
+                            Projet 3
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-400">À venir...</h3>
+                    </div>
+                </div>
+                <p class="text-gray-500">Le contenu de ce projet sera ajouté prochainement.</p>
+            </div>
+
+            <!-- Projet 4 - À venir -->
+            <div class="glass-effect p-8 rounded-xl opacity-50">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <div class="inline-flex items-center px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-sm font-semibold mb-3">
+                            Projet 4
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-400">À venir...</h3>
+                    </div>
+                </div>
+                <p class="text-gray-500">Le contenu de ce projet sera ajouté prochainement.</p>
             </div>
         </div>
     </section>
