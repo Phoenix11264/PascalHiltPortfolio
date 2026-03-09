@@ -171,30 +171,30 @@
                     </div>
                     <div class="relative flex justify-center">
                         <!-- Carousel container -->
-                        <div id="carousel" class="relative w-full max-w-4xl h-[420px] bg-slate-900 rounded-xl overflow-hidden border border-cyan-500/20 mx-auto">
+                        <div id="carousel" data-images="assets/img/bottomup-accueil.png,assets/img/bottomup-code.png,assets/img/bottomup-algo.png,assets/img/bottomup-bdd.png" class="media-carousel relative w-full max-w-4xl h-[420px] rounded-xl overflow-hidden border border-cyan-500/20 mx-auto">
                             <!-- Side previews -->
-                            <img id="leftPreview" src="assets/img/bottomup-accueil.png" class="absolute top-1/2 -translate-y-1/2 left-3 w-1/3 max-w-[280px] opacity-40 blur-[1px] rounded-lg border border-slate-700 object-cover" alt="Aperçu gauche" />
-                            <img id="rightPreview" src="assets/img/bottomup-accueil.png" class="absolute top-1/2 -translate-y-1/2 right-3 w-1/3 max-w-[280px] opacity-40 blur-[1px] rounded-lg border border-slate-700 object-cover" alt="Aperçu droite" />
+                            <img id="leftPreview" loading="lazy" decoding="async" src="assets/img/bottomup-accueil.png" class="carousel-preview absolute top-1/2 -translate-y-1/2 left-3 w-1/3 max-w-[280px] rounded-lg object-cover" alt="Apercu gauche" />
+                            <img id="rightPreview" loading="lazy" decoding="async" src="assets/img/bottomup-accueil.png" class="carousel-preview absolute top-1/2 -translate-y-1/2 right-3 w-1/3 max-w-[280px] rounded-lg object-cover" alt="Apercu droite" />
                             <!-- Main image -->
-                            <img id="mainImage" src="assets/img/bottomup-accueil.png" class="absolute inset-0 m-auto w-[64%] h-[70%] object-contain rounded-xl shadow-lg cursor-pointer z-10 pointer-events-auto" alt="Capture principale" />
+                            <img id="mainImage" decoding="async" src="assets/img/bottomup-accueil.png" class="carousel-main absolute inset-0 m-auto w-[64%] h-[70%] object-contain rounded-xl cursor-pointer z-10 pointer-events-auto" alt="Capture principale" />
                             <!-- Bouton Agrandir - toujours visible -->
-                            <button id="expandBtn" class="absolute top-4 right-4 bg-cyan-500/20 hover:bg-cyan-500/40 text-cyan-300 border border-cyan-500/40 rounded-lg px-4 py-2 flex items-center gap-2 transition-all z-30 pointer-events-auto cursor-pointer">
+                            <button id="expandBtn" class="absolute top-4 right-4 bg-cyan-500/20 hover:bg-cyan-500/40 text-cyan-300 border border-cyan-500/40 rounded-lg px-4 py-2 flex items-center gap-2 transition-all z-30 pointer-events-auto cursor-pointer" type="button">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
                                 </svg>
                                 <span class="text-sm font-medium">Ouvrir en grand</span>
                             </button>
                             <!-- Arrows -->
-                            <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 rounded-full w-10 h-10 flex items-center justify-center z-10">
+                            <button id="prevBtn" class="carousel-control absolute left-4 top-1/2 -translate-y-1/2 text-cyan-300 rounded-full w-10 h-10 flex items-center justify-center z-10" type="button" aria-label="Image precedente">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
                             </button>
-                            <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 rounded-full w-10 h-10 flex items-center justify-center z-10">
+                            <button id="nextBtn" class="carousel-control absolute right-4 top-1/2 -translate-y-1/2 text-cyan-300 rounded-full w-10 h-10 flex items-center justify-center z-10" type="button" aria-label="Image suivante">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                             </button>
                         </div>
                     </div>
                     <!-- Modale plein écran -->
-                    <div id="imageModal" class="fixed inset-0 bg-black/90 z-[9999] hidden items-center justify-center p-8">
+                    <div id="imageModal" class="fixed inset-0 z-[9999] hidden items-center justify-center p-8">
                         <button id="closeModal" class="absolute top-6 right-6 bg-red-500/20 hover:bg-red-500/40 text-red-300 border border-red-500/40 rounded-full w-14 h-14 flex items-center justify-center transition-all z-[10000]">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -264,103 +264,9 @@
             });
         }
 
-        // Carousel logic - charge directement tes PNG
-        (function() {
-            // Tes images - utiliser les fichiers existants
-            const images = [
-                'assets/img/bottomup-accueil.png',
-                'assets/img/bottomup-code.png',
-                'assets/img/bottomup-algo.png',
-                'assets/img/bottomup-bdd.png'
-            ];
-
-            const main = document.getElementById('mainImage');
-            const left = document.getElementById('leftPreview');
-            const right = document.getElementById('rightPreview');
-            const prev = document.getElementById('prevBtn');
-            const next = document.getElementById('nextBtn');
-            const dots = document.getElementById('dots');
-            let idx = 0;
-
-            function render() {
-                if (!images.length) return;
-                const l = (idx - 1 + images.length) % images.length;
-                const r = (idx + 1) % images.length;
-
-                // Charge les images avec fallback sur erreur
-                main.src = images[idx];
-                main.onerror = function() {
-                    this.src = images[idx].replace('.png', '.svg').replace('.jpg', '.svg').replace('.jpeg', '.svg');
-                };
-
-                left.src = images[l];
-                left.onerror = function() {
-                    this.src = images[l].replace('.png', '.svg').replace('.jpg', '.svg').replace('.jpeg', '.svg');
-                };
-
-                right.src = images[r];
-                right.onerror = function() {
-                    this.src = images[r].replace('.png', '.svg').replace('.jpg', '.svg').replace('.jpeg', '.svg');
-                };
-
-                // Met à jour les points de navigation
-                dots.innerHTML = '';
-                images.forEach((_, i) => {
-                    const d = document.createElement('button');
-                    d.className = 'w-2.5 h-2.5 rounded-full ' + (i === idx ? 'bg-cyan-400' : 'bg-slate-600');
-                    d.addEventListener('click', () => { idx = i; render(); });
-                    dots.appendChild(d);
-                });
-            }
-
-            prev && prev.addEventListener('click', () => { idx = (idx - 1 + images.length) % images.length; render(); });
-            next && next.addEventListener('click', () => { idx = (idx + 1) % images.length; render(); });
-            render();
-        })();
-
-        // Modale d'agrandissement
-        (function() {
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            const expandBtn = document.getElementById('expandBtn');
-            const closeBtn = document.getElementById('closeModal');
-            const mainImg = document.getElementById('mainImage');
-
-            if (!modal || !modalImage || !expandBtn || !mainImg) return;
-
-            // Ouvrir la modale
-            function openModal() {
-                modalImage.src = mainImg.src || '';
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            }
-
-            // Fermer la modale
-            function closeModal() {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                modal.style.display = 'none';
-                document.body.style.overflow = '';
-            }
-
-            // Événements
-            expandBtn.addEventListener('click', openModal);
-            mainImg.addEventListener('click', openModal);
-            closeBtn && closeBtn.addEventListener('click', closeModal);
-            modal.addEventListener('click', (e) => {
-                if (!modalImage.contains(e.target) && e.target !== closeBtn) {
-                    closeModal();
-                }
-            });
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                    closeModal();
-                }
-            });
-        })();
+        // Carousel + modale geres par assets/js/carousel.js
     </script>
+    <script src="assets/js/carousel.js"></script>
     <script src="assets/js/back-to-top.js"></script>
 
     <!-- Bouton retour en haut -->
